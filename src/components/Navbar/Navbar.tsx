@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
   Box,
   Flex,
@@ -8,21 +7,15 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import React from "react";
 import { COLORS } from "../../utils/chakra-ui/palette.util";
-import { ColorModeSwitcher } from "../ColorModeSwitcher/ColorModeSwitcher";
 const Links = ["Home", "Projects", "Blog", "Contact"];
 
-type ContainerProps = {
-  children: React.ReactNode;
-};
-
-export const Navbar = (_props: ContainerProps) => {
+export const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
-      <Box bg={COLORS.PRIMARY} px={4}>
+      <Box pt={4} bg={COLORS.PRIMARY} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <HStack spacing={8} alignItems={"center"}>
             <Box color={COLORS.WHITE}>Anujkumar Yadav</Box>
@@ -54,7 +47,6 @@ export const Navbar = (_props: ContainerProps) => {
                   {link}
                 </Box>
               ))}
-              <ColorModeSwitcher />
             </HStack>
           </Flex>
         </Flex>
