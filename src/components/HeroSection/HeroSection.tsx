@@ -1,13 +1,12 @@
-import { Stack, VStack, Text, Box, Image } from "@chakra-ui/react";
-import { COLORS } from "../../utils/chakra-ui/palette.util";
+import { Stack, VStack, Text, Box, Image, Button } from "@chakra-ui/react";
 import HeroImage from "../../assets/hero.jpg";
+import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 
 function HeroSection() {
   return (
     <Stack
       padding="0 1rem"
       width="100%"
-      bgColor={COLORS.PRIMARY}
       direction={{ base: "column", md: "row" }}
     >
       <VStack
@@ -16,12 +15,16 @@ function HeroSection() {
         spacing={4}
         align="stretch"
       >
-        <Text fontSize={{ base: "4xl", md: "6xl" }} color={COLORS.WHITE}>
-          Hello! I'm
-        </Text>
-        <Text fontSize={{ base: "5xl", md: "6xl" }} color={COLORS.WHITE}>
-          Anujkumar Yadav
-        </Text>
+        <Text fontSize={{ base: "4xl", md: "6xl" }}>Hello! I'm</Text>
+        <Text fontSize={{ base: "5xl", md: "6xl" }}>Anujkumar Yadav</Text>
+        <Stack direction="row" spacing={4}>
+          <Button leftIcon={<EmailIcon />} colorScheme="teal" variant="solid">
+            Download CV
+          </Button>
+          <Button leftIcon={<PhoneIcon />} colorScheme="teal" variant="outline">
+            Get in touch
+          </Button>
+        </Stack>
       </VStack>
       <VStack
         marginRight=".3rem"

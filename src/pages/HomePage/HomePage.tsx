@@ -1,12 +1,14 @@
 import HeroSection from "../../components/HeroSection/HeroSection";
-import { Flex } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
+import AboutSection from "../../components/AboutSection/AboutSection";
 import React from "react";
 
 function HomePage() {
   return (
-    <Flex mt={5} width="100%" height="100%" bgColor="white">
-    <HeroSection />
-    </Flex>
+    <VStack mt={5} width="100%" height="100%">
+      <HeroSection />
+      <AboutSection />
+    </VStack>
   );
 }
 

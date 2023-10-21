@@ -7,7 +7,6 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { COLORS } from "../../utils/chakra-ui/palette.util";
 const Links = ["Home", "Projects", "Blog", "Contact"];
 
 export const Navbar = () => {
@@ -15,10 +14,10 @@ export const Navbar = () => {
 
   return (
     <>
-      <Box pt={4} bg={COLORS.PRIMARY} px={4}>
+      <Box pt={4}  px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <HStack spacing={8} alignItems={"center"}>
-            <Box color={COLORS.WHITE}>Anujkumar Yadav</Box>
+            <Box>Anujkumar Yadav</Box>
           </HStack>
           <Flex alignItems={"center"}>
             <IconButton
@@ -41,7 +40,6 @@ export const Navbar = () => {
                   _hover={{
                     textDecoration: "none",
                   }}
-                  color={COLORS.WHITE}
                   href={"#"}
                 >
                   {link}
@@ -62,7 +60,6 @@ export const Navbar = () => {
                   _hover={{
                     textDecoration: "none",
                   }}
-                  textColor="WHITE"
                   href={"#"}
                 >
                   {link}
