@@ -1,5 +1,5 @@
-import { Stack, VStack, Text, Box, Image, Button } from "@chakra-ui/react";
-import HeroImage from "../../assets/hero.jpg";
+import { Stack, VStack, Text, Box, Button } from "@chakra-ui/react";
+// import HeroImage from "../../assets/hero.jpg";
 import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 
 function HeroSection() {
@@ -32,7 +32,7 @@ function HeroSection() {
         spacing={4}
       >
         <Box>
-          <Image src={HeroImage} alt="Dan Abramov" />
+          {/* <Image src={HeroImage} alt="Dan Abramov" /> */}
         </Box>
       </VStack>
     </Stack>
